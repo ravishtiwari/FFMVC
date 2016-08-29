@@ -1,9 +1,9 @@
 # FFMVC PHP7
 
-[![Travis CI](https://travis-ci.org/vijinho/FFMVC.svg?branch=dev-master)](https://travis-ci.org/vijinho/FFMVC)
-[![Build Status](https://scrutinizer-ci.com/g/vijinho/FFMVC/badges/build.png?b=dev-master)](https://scrutinizer-ci.com/g/vijinho/FFMVC/build-status/dev-master)
-[![Code Coverage](https://scrutinizer-ci.com/g/vijinho/FFMVC/badges/coverage.png?b=dev-master)](https://scrutinizer-ci.com/g/vijinho/FFMVC/?branch=dev-master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vijinho/FFMVC/badges/quality-score.png?b=dev-master)](https://scrutinizer-ci.com/g/vijinho/FFMVC/?branch=dev-master)
+[![Travis CI](https://travis-ci.org/ravishtiwari/FFMVC.svg?branch=php56)](https://travis-ci.org/ravishtiwari/FFMVC)
+[![Build Status](https://scrutinizer-ci.com/g/ravishtiwari/FFMVC/badges/build.png?b=php56)](https://scrutinizer-ci.com/g/ravishtiwari/FFMVC/build-status/php56)
+[![Code Coverage](https://scrutinizer-ci.com/g/ravishtiwari/FFMVC/badges/coverage.png?b=php56)](https://scrutinizer-ci.com/g/vijinho/FFMVC/?branch=php56)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ravishtiwari/FFMVC/badges/quality-score.png?b=php56)](https://scrutinizer-ci.com/g/ravishtiwari/FFMVC/?branch=php56)
 
 Files used by the https://github.com/vijinho/f3-boilerplate project.
 
