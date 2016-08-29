@@ -2,7 +2,8 @@
 
 namespace FFMVC\Helpers;
 
-use FFMVC\{Helpers, Models};
+use FFMVC\Helpers;
+use FFMVC\Models;
 
 /**
  * Notifications Helper Class.
@@ -110,7 +111,7 @@ class Notifications extends \Prefab
      * @param string $notification
      * @param string $type
      */
-    public static function add(string $notification, string $type = null)
+    public static function add($notification, $type = null)
     {
         $f3 = \Base::instance();
         $notifications = $f3->get('notifications');
@@ -151,7 +152,7 @@ class Notifications extends \Prefab
      * @param bool $clear
      * @return boolean|array
      */
-    public static function get(string $type = null, bool $clear = true)
+    public static function get($type = null, $clear = true)
     {
         $f3 = \Base::instance();
         $notifications = $f3->get('notifications');
