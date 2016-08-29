@@ -21,7 +21,7 @@ class Url extends \Prefab
      * @param boolean $https force it to be https?
      * @return string
      */
-    public static function external(string $url, $params = null, bool $https = true): string
+    public static function external($url, $params = null, $https = true)
     {
         $f3 = \Base::instance();
 
@@ -58,7 +58,7 @@ class Url extends \Prefab
      * @param boolean $full default true
      * @return string
      */
-    public static function internal(string $url, $params = null, bool $full = true): string
+    public static function internal($url, $params = null, $full = true)
     {
         $f3 = \Base::instance();
 

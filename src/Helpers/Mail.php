@@ -21,7 +21,7 @@ class Mail extends \Prefab
      * @return \PHPMailer
      * @url https://github.com/PHPMailer/PHPMailer
      */
-    public static function &getPhpMailer(array $data = []): \PHPMailer
+    public static function &getPhpMailer($data = [])
     {
         $f3 = \Base::instance();
 
@@ -63,7 +63,7 @@ class Mail extends \Prefab
      * @param array $data
      * @return \SMTP
      */
-    public static function &getMailer(array $data = []): \SMTP
+    public static function &getMailer($data = [])
     {
         $f3 = \Base::instance();
 

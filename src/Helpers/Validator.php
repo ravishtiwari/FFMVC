@@ -40,7 +40,7 @@ class Validator extends \GUMP
      * @param array optinal $ruleset ot use class ruleset
      * @return mixed
      */
-    public function filter(array $input, array $ruleset = [])
+    public function filter($input, $ruleset = [])
     {
         return empty($ruleset) ? parent::filter($input, $this->filter_rules) : parent::filter($input, $ruleset);
     }
@@ -52,7 +52,7 @@ class Validator extends \GUMP
      * @param array optinal $ruleset ot use class ruleset
      * @return mixed
      */
-    public function validate(array $input, array $ruleset = [])
+    public function validate($input, $ruleset = [])
     {
         return empty($ruleset) ? parent::validate($input, $this->validation_rules) : parent::validate($input, $ruleset);
     }

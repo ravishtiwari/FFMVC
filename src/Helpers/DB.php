@@ -29,7 +29,7 @@ class DB extends \Prefab
      * }
      * @see http://php.net/parse_url
      */
-    public static function parseHttpDsn(string $httpDSN): array
+    public static function parseHttpDsn($httpDSN)
     {
         $m = parse_url($httpDSN);
         if (false == $m) {
@@ -56,7 +56,7 @@ class DB extends \Prefab
      * @return string $dsn e.g. mysql:host=127.0.0.1;port=3306;dbname=development_db
      * @see http://php.net/manual/en/class.pdo.php
      */
-    public static function createDbDsn(array $config): string
+    public static function createDbDsn($config)
     {
         if (array_key_exists('dsn_http', $config)) {
             $config = array_merge($config, self::parseHttpDsn($config['dsn_http']));
@@ -81,7 +81,7 @@ class DB extends \Prefab
      * @link https://fatfreeframework.com/sql
      * @see http://php.net/manual/en/class.pdo.php
      */
-    public static function &newDsnDb(string $dsn, string $user, string $pass, array $options = []): \DB\SQL
+    public static function &newDsnDb($dsn, $user, $pass, $options = [])
     {
         $db = new \DB\SQL(
             $dsn,
@@ -111,7 +111,7 @@ class DB extends \Prefab
      * @link https://fatfreeframework.com/sql
      * @see http://php.net/manual/en/class.pdo.php
      */
-    public static function &newDb($params): \DB\SQL
+    public static function &newDb($params)
     {
         if (is_string($params)) {
             $params = self::parseHttpDsn($params);

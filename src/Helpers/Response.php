@@ -22,7 +22,7 @@ class Response extends \Prefab
      *
      * @see http://www.w3.org/TR/2008/WD-access-control-20080912/
      */
-    public static function json(array $data, array $params = [], bool $output = true)
+    public static function json($data, $params = [], $output = true)
     {
         $f3 = \Base::instance();
 

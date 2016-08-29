@@ -19,7 +19,7 @@ class Time extends \Prefab
      * @return string date in format of database driver
      * @todo add a switch for the f3 database driver and set the timestamp
      */
-    public static function database(int $unixtime = null, string $dbms = null): string
+    public static function database($unixtime = null, $dbms = null)
     {
 
         // use current time if bad time value or unset
@@ -45,7 +45,7 @@ class Time extends \Prefab
      * @param int time php time value
      * @param string $zone timezone
      */
-    public static function HTTP(int $unixtime = null, string $zone = ''): string
+    public static function HTTP($unixtime = null, $zone = '')
     {
         $f3 = \Base::instance();
 

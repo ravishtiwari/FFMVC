@@ -28,7 +28,7 @@ class Notifications extends \Prefab
      * @param bool $saveState
      * @param array $types
      */
-    public static function init(bool $saveState = true, array $types = [])
+    public static function init($saveState = true, $types = [])
     {
         $f3 = \Base::instance();
         $cli = (PHP_SAPI == 'cli');
@@ -78,7 +78,7 @@ class Notifications extends \Prefab
      * @param bool $boolean
      * @return boolean
      */
-    public static function saveState(bool $boolean = true): bool
+    public static function saveState($boolean = true)
     {
         if (PHP_SAPI !== 'cli') {
             $f3 = \Base::instance();

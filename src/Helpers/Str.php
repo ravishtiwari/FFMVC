@@ -19,7 +19,7 @@ class Str extends \Prefab
      * @param string $chars characters to use for random string
      * @return string password
      */
-    public static function random(int $length = 10, string $chars = null): string
+    public static function random($length = 10, $chars = null)
     {
         if (empty($chars)) {
             // ignore characters which can be consued, i, l, 1, o, O, 0 etc
@@ -47,7 +47,7 @@ class Str extends \Prefab
      * @link http://php.net/manual/en/function.hash-hmac.php
      * @link http://fatfreeframework.com/base#hash
      */
-    public static function salted(string $string, string $pepper = ''): string
+    public static function salted($string, $pepper = '')
     {
         $f3 = \Base::instance();
         $salt = $f3->get('security.salt');
@@ -63,7 +63,7 @@ class Str extends \Prefab
      * @param string $pepper string pepper to add to the salted string for extra security
      * @return string $encoded
      */
-    public static function password(string $string, string $pepper = ''): string
+    public static function password($string, $pepper = '')
     {
         return \Base::instance()->hash(self::salted($string, $pepper));
     }
@@ -77,7 +77,7 @@ class Str extends \Prefab
      * @param string $pepper string pepper to add to the salted string for extra security
      * @return boolean success on match
      */
-    public static function passwordVerify(string $hashed_password, string $string, string $pepper = ''): string
+    public static function passwordVerify($hashed_password, $string, $pepper = '')
     {
         return ($hashed_password === \Base::instance()->hash(self::salted($string, $pepper)));
     }
@@ -90,7 +90,7 @@ class Str extends \Prefab
      * @url https://github.com/fzaninotto/Faker
      * @return string $uuid
      */
-    public static function uuid(): string
+    public static function uuid()
     {
         // fix for compatibility with 32bit architecture; seed range restricted to 62bit
         $seed = mt_rand(0, 2147483647) . '#' . mt_rand(0, 2147483647);
